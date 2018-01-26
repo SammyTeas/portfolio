@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Sammy Teas — Book Designer</title>
+		<meta content="Book designer and illustrator." name="description" />
+
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="favicon.ico"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" href="css/w3.css">
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+		<link href="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" rel="stylesheet" />
+		<link href="resources/photoswipe.css" type="text/css" rel="stylesheet" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="js/modernizr.custom.js"></script>
+
+		<script src="resources/klass.min.js"></script>
+				<script type='text/javascript' src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+
+
+	<script src="js/strip.pkgd.min.js"></script>
+	<link href="css/strip.css" media="all" rel="stylesheet" type="text/css" >
+	<style>
+	#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff; /* change if the mask should be a color other than white */
+	z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally on the screen */
+	top:50%; /* centers the loading animation vertically on the screen */
+	background-image:url(images/status.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+
+
+.text {
+  white-space: nowrap; 
+  color: #404040;
+  font-size: 13px;
+  position: absolute;
+  left: 50%;
+  margin-top: -10px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+}
+
+.overlay {
+  position: absolute;
+  width: 150px;
+  opacity: 0;
+  transition: .5s ease;
+
+
+}
+
+.strp-window {
+
+height: calc(100% - 52px);
+height: -moz-calc(100% - 52px);
+/* WebKit */
+height: -webkit-calc(100% - 52px);
+/* Opera */
+height: -o-calc(100% - 52px);
+/* Standard */
+height: calc(100% - 52px);
+
+}
+
+.peat:hover .overlay{
+opacity: 1;
+z-index: 9999999999;
+}
+
+
+img.transparent {
+	opacity: 0.6;
+}
+
+
+img.transparent:hover {
+	opacity: 1;
+}
+
+.peat >img {
+	max-width: 150px;
+	min-width: 150px;
+}
+
+.bk-info {
+	margin-top: 470px;
+	margin-bottom:-100px;
+}
+
+
+
+.bk-info >h5 {
+	font-size: 14px;
+	margin-bottom:;
+}
+
+.bk-info p {
+	font-size: 12px;
+	line-height: 14px;
+}
+
+
+.footer-fixed {
+	position:fixed;
+	z-index: 99999999;
+}
+
+.jobbanner {
+	width: 70%;
+	max-width: 1080px;
+	height: 1px;
+	margin: auto;
+	position: relative;
+	display: block;
+	clear: both;
+	background-color: #d3d3d3 ;
+}
+
+
+.open {
+
+    padding-top: 100px;
+    padding-bottom: 180px;
+
+}
+
+.main	{
+	width: 90%;
+	max-width: 1080px;
+	margin: 0 auto;
+	position: fixed
+	padding: 0 30px 0px ;
+    padding-top: 110px;
+
+}
+
+.mainalt	{
+	width: 90%;
+	max-width: 810px;
+	margin: 0 auto;
+	position: fixed
+	padding: 0 30px 0px ;
+    padding-top: 110px;
+
+}
+#twoline {
+	max-width: 750px;
+}
+
+#oneline {
+	max-width: 450px;
+	margin-left: 200px;
+}
+
+@media only screen and (max-width: 1192px) {
+
+	ul.social-icons {
+	margin-top:0px;
+	margin-left: -80px;}
+
+
+
+    .social-icons .fa {
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+		padding-right: 5px;
+	padding-left: 40px;
+	margin-bottom: 5px;
+	font-size: 1.5em;
+}
+.main {
+	width: 750px;
+	padding-left: 2%;
+}
+
+.open {
+	width: 500px;
+	padding-bottom:350px;
+}
+
+.peat {
+	padding-bottom:30px;
+
+}
+
+
+#twoline {
+	margin-left: -20px;
+}
+
+#oneline {
+	margin-left: -20px;
+}
+
+@media only screen and (max-width: 920px) {
+
+.mainalt {
+	width: 450px;
+	padding-left: 3%;
+}
+
+.mainalt > ul {
+	text-align:center;
+}
+
+}
+
+@media only screen and (max-width: 800px) {
+.main {
+	width: 450px;
+	padding-left: 3%;
+}
+
+.open {
+	width: 300px;
+	padding-bottom: 550px;
+}
+
+
+
+ul.bk-list {
+	text-align: center;
+}
+div.buttons {
+	padding-left: 25px;
+}
+
+
+
+@media only screen and (max-width: 830px) {
+    
+    	ul.social-icons {
+	z-index: 1000;}
+
+    nav {
+    	
+    top: 0;
+  position: fixed;
+    width: 100%;
+    z-index:999;
+    opacity:1;
+    -webkit-transition:opacity 1s ease-in-out;
+    -moz-transition:opacity 1s ease-in-out;
+    -o-transition:opacity 1s ease-in-out;
+    -ms-transition:opacity 1s ease-in-out;
+    transition:opacity 1s ease-in-out;
+    }
+
+    .w3-content .w3-display-container {
+    	padding-top:40px;
+    }
+
+
+
+    nav > ul {
+    	display: inline-block;
+ 
+    }
+    .container {
+    	padding-top: 80px;
+    }
+
+
+   @media only screen and (max-width: 700px) {
+    
+nav {
+	width: 400px;
+	position:absolute;
+ left:50%;
+  margin-left:-200px;
+}
+
+.navbar-fixed {
+  width: 400px;
+}
+
+#largerr {
+	padding-right: 28.5px;
+	padding-left: 28.5px;
+}
+
+   .w3-content .w3-display-container {
+    	padding-top:80px;
+    }
+
+.w3-display-middle{
+	margin-top: 40px;
+}
+
+.w3-button{
+	margin-top: 40px;
+}
+
+.w32-button{
+	margin-top: 40px;
+}
+
+
+.w3-blackbox,.w3-hover-blackbox:hover{color:black!important;background-color: white!important;  text-align: center; min-height: 10em; min-width: 10em ; max-height: 10em; max-width: 10em;}
+.w3-blackbox > h1 {font-size: 5em; font-family: 'Merriweather', serif; 	margin-bottom: -60px; margin-top:-7px;}
+.w3-blackbox > p {font-size: 14px; margin-top: 30px;}
+.words-1 span {font-size: 14px; margin-top: 12px;   margin-left: 0px;}
+
+.w3-blackbox,.w3-hover-blackbox:hover{color:black!important;background-color: white!important;  text-align: center; min-height: 8em; min-width: 8em ; max-height: 8em; max-width: 8em;}
+.w3-blackbox > h1 {font-size: 4em; font-family: 'Merriweather', serif; 	margin-bottom: -60px; margin-top:-7px;}
+
+
+   @media only screen and (max-width: 500px) {
+    
+
+
+
+.open {
+	padding-top: 40px;
+	padding-bottom: 500px;
+}
+
+   .w3-content .w3-display-container {
+    	display:none;
+    }
+
+          .w3-content .w3-display-container2 {
+    	display:block;
+    	padding-top:80px;
+    }
+}
+
+
+
+
+
+</style>
+
+
+	<script>
+	$(document).ready(function() {
+  
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 690) {
+      $('#nav_bar').addClass('navbar-fixed');
+    }
+    if ($(window).scrollTop() < 691) {
+      $('#nav_bar').removeClass('navbar-fixed');
+    }
+  });
+});</script>
+
+	<script>
+	$(document).ready(function() {
+  
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 140) {
+      $('#socials').addClass('social-fixed');
+    }
+    if ($(window).scrollTop() < 141) {
+      $('#socials').removeClass('social-fixed');
+    }
+  });
+});</script>	
+
+
+	<script>
+	$(document).ready(function() {
+  
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 700) {
+      $('#footer').addClass('footer-fixed');
+    }
+    if ($(window).scrollTop() < 701) {
+      $('#footer').removeClass('footer-fixed');
+    }
+  });
+});</script>	
+
+	</head>
+
+	<div id="preloader">
+	<div id="status">&nbsp;</div>
+	</div>
+
+<div>
+	<div id='socials'>
+				<ul class="social-icons icon-circle icon-zoom" > 
+	      <li><a href="https://www.pinterest.ca/sammyteas/"><i class="fa fa-pinterest"></i></a> </li> 
+	      <li><a href="https://www.behance.net/sammyteas"><i class="fa fa-behance"></i></a> </li>   
+	      <li> <a href="https://www.instagram.com/sammyteas/"><i class="fa fa-instagram"></i></a></li> 
+	  	</ul>
+	</div>
+
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img class="fading" src="images/banners/2.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-blackbox">
+    <h1>st<br></h1>
+
+                    <div class="words words-1" >
+                        <p >
+                        <span >sam tse</span>
+                       
+                            </p>
+                    </div>
+                    <p style="padding-left:6px;"> book design</p>
+  </div>
+</div>
+
+<div class="w3-display-container2 " >
+  <img class="fading" src="images/banners/1.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-blackbox">
+       <h1>st<br></h1>
+                    <p style="padding-left:6px;">book design</p>
+  </div>
+</div>
+
+
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+$('.mySlides:visible').fadeOut(function() {
+   $(x[slideIndex-1]).fadeIn();
+});
+}
+</script>
+
+
+
+
+
+  <nav id='nav_bar'>
+    <ul class='nav_links'>
+    	<li style="background-color:lightyellow">Portfolio</li>
+      <li><a href="services.html">Services</a></li>
+
+      <li id="largerr"><a href="about.html">About</a></li>
+      <li id="largerr"><a href="contact.html">Contact</a></li>
+</div>
+
+    </ul>
+
+
+  </nav>
+
+
+			
+
+	<body>
+
+
+
+
+
+
+
+			<!-- ACI -->
+			<div class="open" id="toptop">
+		
+
+			
+
+  				<div class="peat" onclick="poniard()"> <img class= "transparent" src="images/port/business/poniard.png" ><div class="overlay">
+    <p class="text">Poniard Press</p>
+  </div></div>
+
+  <div class="peat" onclick="harper()"> <img class= "transparent" src="images/port/business/harper.png" ><div class="overlay">
+    <p class="text">HarperCollins</p>
+  </div></div>
+
+			<div class="peat" onclick="drawn()"> <img class= "transparent" src="images/port/business/drawn.png" ><div class="overlay">
+    <p class="text">Drawn &amp; Quarterly</p>
+  </div></div>
+  			<div class="peat" onclick="firefly()"> <img class= "transparent" src="images/port/business/firefly.png"><div class="overlay">
+    <p class="text">Firefly Books</p>
+  </div></div>
+  				<div class="peat" onclick="myFunction()"> <img class= "transparent" src="images/port/business/aci.png"> <div class="overlay"><p class="text">Art Canada Institute</p>
+  </div>
+  </div>
+
+			<div class="peat" onclick="penguin()"> <img class= "transparent" src="images/port/business/Penguin_logo.png"  ><div class="overlay">
+    <p class="text">Penguin</p>
+  </div>
+			</div>
+
+</div>
+
+
+
+		
+
+			<!-- Poniard -->
+
+</div>
+	<div class="main" id="poniard">
+				<ul class="bk-list">
+					<li>
+						<div class="fade">
+				<a href="images/port/gallerys/haunting.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="haunting">
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front" style="width: 300px">
+								<div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/haunting.jpg); width:300px; height: 414px;">
+									</div>
+								</div>
+									<div class="bk-right"></div>
+										<div class="bk-left">
+										</div>
+											<div class="bk-top">
+											</div>
+												<div class="bk-bottom">
+												</div>
+												
+
+						</div>
+				</a>
+												<a href="images/port/gallerys/haunting2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="haunting"></a>
+								<a href="images/port/gallerys/haunting3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="haunting"></a>
+												<a href="images/port/gallerys/haunting4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="haunting"></a>
+
+						</div>
+
+
+
+						<div class="bk-info">
+							
+						<h4>The Haunting of Hill House</h4>
+						<h5>Shirley Jackson</h5>
+							<p>
+							Publisher: Poniard Press<br>
+							Role: Cover design, layout design, typesetting
+
+
+							</p>
+						</div>
+						
+					</li>
+					<li>
+<div class="fade">
+				<a href="images/port/gallerys/forwhom.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="forwhom">
+						<div class="bk-book book-1 bk-bookdefault" >
+						<div class="bk-front">
+								<div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/forwhom.jpg); width:300px; height: 414px;">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+						</div>
+						</a>
+					<a href="images/port/gallerys/forwhom2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="forwhom"></a>
+					<a href="images/port/gallerys/forwhom3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="forwhom"></a>
+
+					<a href="images/port/gallerys/forwhom4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="forwhom"></a>
+
+</div>
+
+		
+						<div class="bk-info">
+
+								
+							<h4>For Whom the Bell Tolls</h4>
+						<h5>Ernest Hemingway</h5>
+							<p>
+							Publisher: Poniard Press<br>
+							Role: Cover design, layout design, typesetting
+							
+</p>
+
+						</div>
+					</li>
+					<li>
+<div class="fade">
+				<a href="images/port/gallerys/velveteen.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="vel">
+				
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+							<div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/velveteen.jpg); width:300px; height: 414px;">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+
+</a>
+				<a href="images/port/gallerys/velveteen2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="vel"></a>
+								<a href="images/port/gallerys/velveteen3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="vel"></a>
+
+				<a href="images/port/gallerys/velveteen4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="vel"></a>
+
+</div>
+						<div class="bk-info">
+		
+						<h4>The Velveteen Rabbit</h4>
+						<h5>Margery Williams</h5>
+							<p>
+							Publisher: Poniard Press<br>
+							Role: Cover design, layout design, typesetting, illustration
+							
+</p>
+						</div>
+					</li>
+					<li>
+					<div class="fade">
+				<a href="images/port/gallerys/abelard.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="heloise">
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+							<div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/abelard.jpg); width:300px; height: 414px;">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+					<a href="images/port/gallerys/abelard2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="heloise"></a>
+					<a href="images/port/gallerys/abelard3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="heloise"></a>
+
+					<a href="images/port/gallerys/abelard4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="heloise"></a>
+
+						</div>
+
+
+
+						<div class="bk-info">
+				
+								<h4>Love Letters</h4>
+						<h5>Peter Abelard and Héloïse</h5>
+							<p>
+							Publisher: Poniard Press<br>
+							Role: Cover design, layout design, typesetting
+							</p>
+
+						</div>
+						
+					</li>
+					<li>
+					<div class="fade">
+				<a href="images/port/gallerys/swordinthe.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="stone">
+						<div class="bk-book book-1 bk-bookdefault">
+					<div class="bk-front">
+							<div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/sword.jpg); width:300px; height: 414px;">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+
+			
+
+						</div>
+						</a>
+										<a href="images/port/gallerys/swordinthe2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="stone"></a>
+<a href="images/port/gallerys/swordinthe3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="stone"></a>
+
+										<a href="images/port/gallerys/swordinthe4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="stone"></a>
+										</div>
+
+
+		
+						<div class="bk-info">
+
+
+
+				
+								<h4>The Sword in the Stone</h4>
+						<h5>T.H. White</h5>
+							<p>
+							Publisher: Poniard Press<br>
+							Role: Cover design, layout design, typesetting, illustration
+							</p>
+
+
+						</div>
+					</li>
+					<li>
+				<div class="fade">
+				<a href="images/port/gallerys/jungle.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="jungle">
+						<div class="bk-book book-1 bk-bookdefault">
+						<div class="bk-front">
+							<div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/jungle.jpg); width:300px; height: 414px;">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+</a>
+			
+</div>
+
+						<div class="bk-info">	
+							<h4>The Jungle Book</h4>
+						<h5>Rudyard Kipling</h5>
+							<p>
+							Publisher: Poniard Press<br>
+							Role: Cover design, layout design, typesetting
+							</p>
+
+						</div>
+					</li>
+					<li>
+<div class="fade">
+				<a href="images/port/gallerys/frank.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="frank">
+						<div class="bk-book book-1 bk-bookdefault">
+						<div class="bk-front">
+							<div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/franken.jpg); width:300px; height: 414px;">
+									</div>
+								</div>
+									<div class="bk-right"></div>
+										<div class="bk-left">
+										</div>
+											<div class="bk-top"> 
+											</div>
+												<div class="bk-bottom">
+												</div>
+												</div>
+												</a>
+				<a href="images/port/gallerys/frank2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="frank"></a>
+
+				<a href="images/port/gallerys/frank3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="frank"></a>
+
+				<a href="images/port/gallerys/frank4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="frank"></a>
+
+						</div>
+						
+
+
+
+						<div class="bk-info">
+							
+
+
+							<h4>Frankenstein</h4>
+						<h5>Mary Shelley</h5>
+							<p>
+							Publisher: Poniard Press<br>
+							Role: Cover design, layout design, typesetting, illustration
+
+
+							</p>
+						</div>
+						
+					</li>
+			
+					<li>
+<div class="fade">
+				<a href="images/port/gallerys/moon.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="moon">
+				
+						<div class="bk-book book-1 bk-bookdefault">
+						<div class="bk-front">
+							<div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/moon.jpg); width:300px; height: 414px;">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left" bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+							</div>
+							</a>
+							<a href="images/port/gallerys/moon2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="moon"></a>
+
+				<a href="images/port/gallerys/moon3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="moon"></a>
+
+				<a href="images/port/gallerys/moon4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="moon"></a>
+
+
+						</div>
+		
+		
+						<div class="bk-info">
+
+								
+							<h4>The Moonstone</h4>
+						<h5>Wilkie Collins</h5>
+							<p>
+							Publisher: Poniard Press<br>
+							Role: Cover design, layout design, typesetting
+
+
+							</p>
+
+						</div>
+					</li>
+
+					<li>
+				<div class="fade">
+				<a href="images/port/gallerys/12y.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="12y">
+						<div class="bk-book book-1 bk-bookdefault">
+						<div class="bk-front">
+							<div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/12yrs.cover.jpg); width:300px; height: 414px;">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left" bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+
+						</div>
+		</a>
+						<a href="images/port/gallerys/12y2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="12y"></a>
+
+				<a href="images/port/gallerys/12y3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="12y"></a>
+
+				<a href="images/port/gallerys/12y4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="12y"></a>
+</div>
+		
+						<div class="bk-info">
+
+								
+							<h4>12 Years a Slave</h4>
+						<h5>Solomon Northup</h5>
+							<p>
+							Publisher: Poniard Press<br>
+							Role: Cover design, layout design, typesetting
+
+
+							</p>
+
+						</div>
+					</li>
+
+					</ul>
+					</div>
+			</div>
+
+			<div class="jobbanner"></div>
+
+	<div class="main" >
+				<ul class="bk-list" id="harper">
+					<li>
+						<div class="fade">
+								<a href="images/port/gallerys/canadianity.jpg" class='strip thumbnail' data-strip-caption="We wanted the design to be distinctly Canadian." data-strip-group="canadianity">
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+									<div class="bk-cover" style="background-image: url(images/port/covers/canadianity.jpg);	">
+									</div>
+								</div>
+									<div class="bk-right"></div>
+										<div class="bk-left">
+										</div>
+											<div class="bk-top">
+											</div>
+												<div class="bk-bottom">
+												</div>
+						</div>
+						</a>
+			<a href='images/port/gallerys/canadianity2.jpg' class='strip thumbnail' data-strip-caption="" data-strip-group="canadianity"></a>
+						<a href='images/port/gallerys/canadianity3.jpg' class='strip thumbnail' data-strip-caption="" data-strip-group="canadianity"></a>
+
+			<a href='images/port/gallerys/canadianity4.jpg' class='strip thumbnail' data-strip-caption="" data-strip-group="canadianity"></a>
+			<a href='images/port/gallerys/canadianity5.jpg' class='strip thumbnail' data-strip-caption="" data-strip-group="canadianity"></a>
+
+						</div>
+
+
+
+						<div class="bk-info">
+							
+						<h4>Canadianity</h4>
+						<h5>Jeremy Taggart, Jonathan Torrens</h5>
+							<p>
+							Publisher: HarperCollins Canada<br>
+							Role: Layout design, typesetting<br>
+							Illustrations: Jud Haynes
+
+
+							</p>
+						</div>
+						
+					</li>
+					<li style="width: 287px">
+			<div class="fade">
+								<a href="images/port/gallerys/burn.jpg" class='strip thumbnail' data-strip-caption="Simple and punchy." data-strip-group="burninourbeds">
+						<div class="bk-book book-1 bk-bookdefault" >
+						<div class="bk-front" style="width: 287px">
+								<div class="bk-cover-back" style="width: 287px"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/burnt.jpg); width: 287px" >
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			</div>
+						</a>
+			<a href="images/port/gallerys/burn2.jpg" class='strip thumbnail' data-strip-caption="Really simple." data-strip-group="burninourbeds"></a>
+						<a href="images/port/gallerys/burn3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="burninourbeds"></a>
+
+			<a href="images/port/gallerys/burn4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="burninourbeds"></a>
+
+			<a href="images/port/gallerys/burn5.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="burninourbeds"></a>
+
+
+
+						</div>
+
+					
+		
+						<div class="bk-info">
+
+								
+							<h4>We'll All Be Burnt in Our Beds</h4>
+						<h5>Joel Thomas Hynes</h5>
+						<p>
+							Publisher: HarperCollins Canada<br>
+							Role: Layout design, typesetting
+							
+</p>
+
+						</div>
+					</li>
+
+
+
+					<li style="width: 291px">
+			<div class="fade">
+								<a href="images/port/gallerys/meandme.jpg" class='strip thumbnail' data-strip-caption="A YA book about converging timelines." data-strip-group="meandme">
+						<div class="bk-book book-1 bk-bookdefault" >
+						<div class="bk-front" style="width: 291px">
+								<div class="bk-cover-back" style="width: 287px"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/meandme.jpg); width: 291px" >
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			</div>
+						</a>
+			<a href="images/port/gallerys/meandme2.jpg" class='strip thumbnail' data-strip-caption="We wanted to set the text messages apart; we originally had them in speech bubbles." data-strip-group="meandme"></a>
+						</div>
+
+					
+		
+						<div class="bk-info">
+
+								
+							<h4>Me and Me</h4>
+						<h5>Alice Kuipers</h5>
+						<p>
+							Publisher: HarperCollins Canada<br>
+							Role: Layout design, typesetting
+							
+</p>
+
+						</div>
+					</li>
+
+
+					<li>
+						<div class="fade">
+								<a href="images/port/gallerys/hardwayout.jpg" class='strip thumbnail' data-strip-caption="About an ex&ndash;Hells Angel." data-strip-group="hardway">
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/hardway.jpg); width: 298px">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+						</a>
+			<a href="images/port/gallerys/hardwayout2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="hardway"></a>
+			<a href="images/port/gallerys/hardwayout3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="hardway"></a>
+						</div>
+
+
+
+						<div class="bk-info">
+				
+								<h4>The Hard Way Out</h4>
+						<h5>Dave Atwell, with Jerry Langton</h5>
+							<p>
+								Publisher: HarperCollins Canada<br>
+							Role: Layout design, typesetting
+							</p>
+
+						</div>
+						
+					</li>
+					<li>
+		<div class="fade">
+				<a href="images/port/gallerys/shots1.jpg" class='strip thumbnail' data-strip-caption="Simple and bold." data-strip-group="shots">
+				
+						<div class="bk-book book-1 bk-bookdefault">
+						<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/shots.jpg); width: 296px">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+
+						</div>
+			</a>
+			<a href="images/port/gallerys/shots.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="shots"></a>
+						</div>
+		
+						<div class="bk-info">
+
+
+
+				
+								<h4>Calling the Shots</h4>
+						<h5>Kelly Hrudey, with Kirstie McLellan Day</h5>
+							<p>
+								Publisher: HarperCollins Canada<br>
+							Role: Layout design, typesetting
+							</p>
+
+
+						</div>
+					</li>
+					<li>
+					<div class="fade">
+				<a href="images/port/gallerys/allodds.jpg" class='strip thumbnail' data-strip-caption="A beaut." data-strip-group="against">
+				
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/against.jpg); width: 299px"> 
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+	</a>
+			<a href="images/port/gallerys/allodds2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="against"></a>
+						<a href="images/port/gallerys/allodds3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="against"></a>
+
+			<a href="images/port/gallerys/allodds4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="against"></a>
+
+			<a href="images/port/gallerys/allodds5.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="against"></a>
+
+			</div>
+
+
+						<div class="bk-info">	
+							<h4>Against All Odds</h4>
+						<h5>P.J. Naworynski</h5>
+							<p>
+							Publisher: HarperCollins Canada<br>
+							Role: Layout design, typesetting
+							</p>
+
+						</div>
+					</li>
+					<li > 
+						<div class="fade">
+				<a href="images/port/gallerys/ibificus1.jpg" class='strip thumbnail' data-strip-caption="Punk-rock sensibility." data-strip-group="bificus">
+				
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front" style="-webkit-transform: translate3d(0,0,30px);
+	transform: translate3d(0,0,30px);">
+								<div class="bk-cover-back"></div>
+									<div class="bk-cover"  style="background-image: url(images/port/covers/ibificus.jpg);">
+									</div>
+								</div>
+									<div class="bk-right" style="width:60px; left: -30px;"></div>
+										<div class="bk-left" style="width:60px; left: -30px; background-image: url(images/port/spines/ibificus.jpg);">
+										</div>
+											<div class="bk-top"> 
+											</div>
+												<div class="bk-bottom">
+												</div>
+						</div>
+						</a>
+				<a href="images/port/gallerys/ibificus2.jpg" class='strip thumbnail' data-strip-caption="Kinda a DIY look." data-strip-group="bificus"></a>
+				<a href="images/port/gallerys/ibificus3.jpg" class='strip thumbnail' data-strip-caption="I really wanted to use Arial." data-strip-group="bificus"></a>
+								<a href="images/port/gallerys/ibificus4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="bificus"></a>
+
+				<a href="images/port/gallerys/ibificus5.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="bificus"></a>
+
+						</div>
+
+
+
+						<div class="bk-info">
+							
+
+
+							<h4>I, Bificus</h4>
+						<h5>Bif Naked</h5>
+							<p>
+							Publisher: HarperCollins Canada<br>
+							Role: Layout design, typesetting
+
+
+							</p>
+						</div>
+						
+					</li>
+					<li>
+					<div class="fade">
+				<a href="images/port/gallerys/ceo2.jpg" class='strip thumbnail' data-strip-caption="Designing on spec to match a series." data-strip-group="ceo">
+				
+						<div class="bk-book book-1 bk-bookdefault">
+						<div class="bk-front" >
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/ceo.jpg); width: 290px; ">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left" bk-left" style="background-image: url(images/port/spines/ceo.jpg);">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+
+						</div>
+			</a>
+			<a href="images/port/gallerys/ceo1.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="ceo"></a>
+						</div>
+		
+						<div class="bk-info">
+
+								
+							<h4>CEO of Everything</h4>
+						<h5>Gail Vaz-Oxlade, Victoria Ryce</h5>
+							<p>
+							Publisher: HarperCollins Canada<br>
+							Role: Layout design, typesetting
+
+
+							</p>
+
+						</div>
+					</li>
+
+					<li>
+				<div class="fade">
+				<a href="images/port/gallerys/truth1.jpg" class='strip thumbnail' data-strip-caption="Lengthy sidebars and long lists." data-strip-group="truth">
+				
+						<div class="bk-book book-1 bk-bookdefault">
+						<div class="bk-front" >
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/truth.jpg); ">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left" bk-left" style="background-image: url(images/port/spines/ceo.jpg);">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+
+						</div>
+			</a>
+			<a href="images/port/gallerys/truth.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="truth"></a>
+			<a href="images/port/gallerys/truth2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="truth"></a>
+						</span>
+						</div>
+		
+						<div class="bk-info">
+
+								
+							<h4>Truth &amp; Lies</h4>
+						<h5>Mark Bowden, Tracey Thomson</h5>
+							<p>
+							Publisher: HarperCollins Canada<br>
+							Role: Layout design, typesetting
+
+
+							</p>
+
+						</div>
+					</li>
+
+					</ul>
+					</div>
+			</div>
+	
+
+
+			<!-- drawn -->
+
+				<div class="jobbanner"></div>
+			<div class="mainalt"   id="drawn" >
+				<ul class="bk-list">
+					<li style="width: 334px">
+					<div class="fade">
+				<a href="images/port/gallerys/artcomic.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="artcom">
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+									<div class="bk-cover" style="background-image: url(images/port/covers/artcomic.jpg); width: 334px">
+									</div>
+								</div>
+									<div class="bk-right"></div>
+										<div class="bk-left">
+										</div>
+											<div class="bk-top">
+											</div>
+												<div class="bk-bottom">
+												</div>
+												
+						</div>
+
+						</a>
+
+				<a href="images/port/gallerys/artcomic2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="artcom"></a>
+				<a href="images/port/gallerys/artcomic3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="artcom"></a>
+				<a href="images/port/gallerys/artcomic4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="artcom"></a>
+				</div>
+
+
+
+						<div class="bk-info">
+							
+
+
+							<h4>Art Comic</h4>
+						<h5>Matthe Thurber</h5>
+							<p>
+							Publisher: Drawn &amp; Quarterly<br>
+							Role: Layout design, colouring, art direction<br>
+							Additional Colouring: MJ Robinson
+							</p>
+						</div>
+
+						
+					</li>
+
+										<li style="width: 331px">
+						<div class="fade">
+				<a href="images/port/gallerys/redcolored1.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="redc">
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/redcolored.jpg); width: 331px">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+
+				<a href="images/port/gallerys/redcolored2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="redc"></a>
+								<a href="images/port/gallerys/redcolored3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="redc"></a>
+
+				<a href="images/port/gallerys/redcolored4.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="redc"></a>
+
+				<a href="images/port/gallerys/redcolored5.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="redc"></a>
+
+</div>
+
+						<div class="bk-info">
+		
+							<h4>Red Colored Elegy</h4>
+						<h5>Seiichi Hayashi</h5>
+							<p>
+							Publisher: Drawn &amp; Quarterly<br>
+							Role: Layout design<br>
+						
+
+
+							</p>
+						</div>
+					</li>
+
+					<li style=" width: 360px">
+	<div class="fade">
+				<a href="images/port/gallerys/lovethat.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="lovethatbunch">
+						<div class="bk-book book-1 bk-bookdefault">
+						<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/bunch.jpg); width: 360px">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+
+</div>
+</a>
+				<a href="images/port/gallerys/lovethat2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="lovethatbunch"></a>
+		</div>
+						<div class="bk-info">
+
+								
+							<h4>Love that Bunch</h4>
+						<h5>Aline Kominsky-Crumb</h5>
+							<p>
+							Publisher: Drawn &amp; Quarterly<br>
+							Role: Layout design, "jacket" design<br>
+							Cover Design/Illustration:  Aline Kominsky Crumb, R. Crumb
+
+
+							</p>
+						</div>
+					</li>
+
+								<li style="width: 337px">
+						<div class="fade">
+				<a href="images/port/gallerys/comeeasy.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="comeeasy">
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/comeeasy.jpg); width: 337px">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+
+				<a href="images/port/gallerys/comeeasy2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="comeeasy"></a>
+				<a href="images/port/gallerys/comeeasy3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="comeeasy"></a>
+								<a href="images/port/gallerys/comeeasy5.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="comeeasy"></a>
+
+				<a href="images/port/gallerys/comeeasy6.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="comeeasy"></a>
+
+				</div>
+
+						<div class="bk-info">
+		
+							<h4>It Don't Come Easy</h4>
+						<h5> Philippe Dupuy, Charles Berberian</h5>
+							<p>
+							Publisher: Drawn &amp; Quarterly<br>
+							Role: Cover Design, layout design<br>
+							Art Direction: Tom Devlin<br>
+							Cover Illustration: Dupuy &amp; Berberian
+
+
+							</p>
+						</div>
+					</li>
+</ul>
+</div>
+							
+
+<div class="jobbanner"></div>
+
+	<div class="jobbanner"></div>
+			<div class="mainalt"   id="firefly" >
+				<ul class="bk-list">
+					<li style="width: 360px">
+<div class="fade">
+				<a href="images/port/gallerys/syria.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="syria">
+
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+									<div class="bk-cover" style="background-image: url(images/port/covers/syria.jpg); width: 360px">
+									</div>
+								</div>
+									<div class="bk-right"></div>
+										<div class="bk-left">
+										</div>
+											<div class="bk-top">
+											</div>
+												<div class="bk-bottom">
+												</div>
+						</div>
+						</a>
+				<a href="images/port/gallerys/syria2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="syria"></a>
+				<a href="images/port/gallerys/syria3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="syria"></a>
+
+</div>
+
+
+
+						<div class="bk-info">
+							
+
+
+							<h4>Escape from Syria</h4>
+						<h5>Samya Kullab, Jackie Roche, Mike Freiheit</h5>
+							<p>
+							Publisher: Firefly Books<br>
+							Role: Layout design, typesetting<br>
+							Illustration: Jackie Roche<br>
+							Colours: Mike Freiheit
+
+
+							</p>
+						</div>
+						
+					</li>
+					<li style=" width: 328px">
+				<div class="fade">
+				<a href="images/port/gallerys/schiele.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="schiele">
+						<div class="bk-book book-1 bk-bookdefault">
+						<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/schiele.jpg); width: 328px">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+
+						</div>
+	</a>
+					<a href="images/port/gallerys/schiele1.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="schiele"></a>
+									<a href="images/port/gallerys/schiele2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="schiele"></a>
+									</div>
+
+		
+						<div class="bk-info">
+
+								
+							<h4>Egon Schiele</h4>
+						<h5>Xavier Coste</h5>
+							<p>
+							Publisher: Firefly Books<br>
+							Role: Layout design, typesetting, lettering[font]
+
+
+							</p>
+						</div>
+					</li>
+					<li style="width: 328px">
+		<div class="fade">
+				<a href="images/port/gallerys/capa.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="capa">
+				
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/capa.jpg); width: 328px">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+
+</a>
+				<a href="images/port/gallerys/capa2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="capa"></a>
+								</div>
+						<div class="bk-info">
+		
+							<h4>Robert Capa</h4>
+						<h5>Florent Silloray</h5>
+							<p>
+								Publisher: Firefly Books<br>
+							Role: Layout design, typesetting, lettering[font]
+
+
+							</p>
+						</div>
+					</li>
+								<li style="width: 353px">
+		<div class="fade">
+				<a href="images/port/gallerys/raftsmen.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="raft">
+				
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/raftsmen.jpg); width: 353px">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+</a>
+				<a href="images/port/gallerys/raftsmen2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="raft"></a>
+</a>
+</div>
+						<div class="bk-info">
+		
+							<h4>The Raftsmen</h4>
+						<h5>Ryan Barnett</h5>
+							<p>
+							Publisher: Firefly Books<br>
+							Role: Lettering[font]
+
+
+							</p>
+						</div>
+					</li>
+</ul>
+
+							</div>
+
+<div class="jobbanner"></div>
+
+<!-- ACI-->
+			<div class="main" style=" max-width: 720px"  id="aci">
+				<ul class="bk-list" >
+					<li > 
+						<div class="fade" >
+								<a href="images/port/gallerys/ashoona.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="ashoona">
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front" style="width: 319px;">
+								<div class="bk-cover-back"></div>
+									<div class="bk-cover"  style="background-image: url(images/port/covers/ashoona.jpg); width: 319px">
+									</div>
+								</div>
+									<div class="bk-right"></div>
+										<div class="bk-left" style="background-image: url(images/port/spines/ashoona.jpg); ">
+										</div>
+											<div class="bk-top"> 
+											</div>
+												<div class="bk-bottom">
+												</div>
+						</div>
+						</a>
+			<a href="images/port/gallerys/ashoona2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="ashoona"></a>
+			<a href="images/port/gallerys/ashoona3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="ashoona"></a>
+						</div>
+
+
+
+						<div class="bk-info">
+							
+
+
+							<h4>Shuvinai Ashoona: Life &amp; Work</h4>
+						<h5>Nancy Campbell</h5>
+							<p>
+							Publisher: Art Canada Institute<br>
+							Role: Cover design, layout design, typesetting<br>
+							Art Direction and Series Design: Blackwell Studios
+
+
+							</p>
+						</div>
+						
+					</li>
+					<li>
+<div class="fade" >
+								<a href="images/port/gallerys/curnoe.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="curnoe">
+						<div class="bk-book book-1 bk-bookdefault">
+						<div class="bk-front" style="width: 318px;">
+								<div class="bk-cover-back"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/curnoe.jpg); width: 318px; ">
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left" style="background-image: url(images/port/spines/curnoe.jpg);>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			
+
+						</div>
+			</a>
+			<a href="images/port/gallerys/curnoe2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="curnoe"></a>
+			<a href="images/port/gallerys/curnoe3.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="curnoe"></a>
+						</div>
+		
+						<div class="bk-info">
+
+								
+							<h4>Greg Curnoe: Life &amp; Work</h4>
+						<h5>Judith Rodger</h5>
+							<p>
+							Publisher: Art Canada Institute<br>
+							Role: Cover design, layout design, typesetting<br>
+							Art Direction and Series Design: Blackwell Studios
+
+
+							</p>
+
+						</div>
+					</li>
+					</ul>
+					</div>
+
+
+
+					<div class="jobbanner"></div>
+
+<div class="main" id="penguin">
+			<ul class="bk-list" id="harper">
+					<li>
+						<div class="fade">
+								<a href="images/port/gallerys/saving.jpg" class='strip thumbnail' data-strip-caption="Got to work on this as an intern. Took the front panel and made the wraparound. <br>Glad to know they trusted me enough to touch Eleanor Davis' work!" data-strip-group="penguin">
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover-back"></div>
+									<div class="bk-cover" style="background-image: url(images/port/covers/savingthumb.jpg);	width: 287px"">
+									</div>
+								</div>
+									<div class="bk-right"></div>
+										<div class="bk-left">
+										</div>
+											<div class="bk-top">
+											</div>
+												<div class="bk-bottom">
+												</div>
+						</div>
+						</a>
+						</div>
+
+
+
+						<div class="bk-info">
+							
+							<h4>Saving Montgomery Sole</h4>
+						<h5>Mariko Tamaki</h5>
+							<p>
+							Publisher: Razorbill[Penguin]<br>
+							Role: Arc design, "jacket" design<br>
+							Cover Illustration: Eleanor Davis
+
+
+							</p>
+						</div>
+						
+					</li>
+					<li style="width: 287px">
+			<div class="fade">
+								<a href="images/port/gallerys/mystfrag.jpg" class='strip thumbnail' data-strip-caption="Another front panel to wraparound." data-strip-group="penguin">
+						<div class="bk-book book-1 bk-bookdefault" >
+						<div class="bk-front" style="width: 287px">
+								<div class="bk-cover-back" style="width: 287px"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/Mystfragthumb.jpg); width: 287px" >
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			</div>
+						</a>
+						</div>
+
+					
+		
+						<div class="bk-info">
+
+								
+									<h4>Mysterious Frangrance</h4>
+						<h5>Yasuko Thanh</h5>
+							<p>
+							Publisher: Hamish Hamilton[Penguin]<br>
+							Role: Arc design, "jacket" design<br>
+							Cover Design: Lisa Jager
+							
+</p>
+
+						</div>
+					</li>
+
+
+
+					<li style="width: 291px">
+			<div class="fade">
+								<a href="images/port/gallerys/13Ways.jpg" class='strip thumbnail' data-strip-caption="Another one." data-strip-group="penguin">
+						<div class="bk-book book-1 bk-bookdefault" >
+						<div class="bk-front" style="width: 291px">
+								<div class="bk-cover-back" style="width: 287px"></div>
+								<div class="bk-cover" style="background-image: url(images/port/covers/13waysthumb.jpg); width: 289px" >
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+			</div>
+						</a>
+						</div>
+
+					
+		
+						<div class="bk-info">
+
+													<h4>13 Ways of Looking at a Fat Girl</h4>
+						<h5>Mona Awad</h5>
+							<p>
+							Publisher: Penguin<br>
+							Role: Arc design, "jacket" design<br>
+							Cover Design: Ploy Siripant
+							
+</p>
+
+						</div>
+					</li>
+</ul>
+</div>
+	
+			
+
+
+		
+		</div><!-- /container -->
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/books1.js"></script>
+		<script>
+			$(function() {
+
+				Books.init();
+
+			});
+		</script>
+
+		<script>
+		var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.scrollY >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<script>
+function myFunction() {
+   $('html,body').animate({ scrollTop: $("#aci").offset().top
+}, 1500 );
+      
+
+}
+</script>
+</script>
+
+<script>
+function firefly() {
+   $('html,body').animate({ scrollTop: $("#firefly").offset().top
+}, 2000 );
+      
+
+}
+</script>
+
+
+<script>
+function harper() {
+   $('html,body').animate({ scrollTop: $("#harper").offset().top
+}, 1000 );
+      
+
+}
+</script>
+
+<script>
+function drawn() {
+   $('html,body').animate({ scrollTop: $("#drawn").offset().top
+}, 1000 );
+      
+
+}
+</script>
+
+
+<script>
+function poniard() {
+  $('html,body').animate({ scrollTop: $("#poniard").offset().top
+}, 1000 );
+}      
+</script>
+
+<script>
+function penguin() {
+  $('html,body').animate({ scrollTop: $("#penguin").offset().top
+}, 1000 );
+}      
+</script>
+
+
+
+</div>
+
+<div class="scrolltop" onclick="yoyo()">
+		<footer id="footer">
+Back to top
+</div>
+</footer>
+
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').delay(500).fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(800).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(800).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
+
+<script>
+function yoyo() {
+   $('html,body').animate({ scrollTop: $("#toptop").offset().top
+}, 1000 );
+      
+
+}
+</script>
+
+
+	</body>
+</html>

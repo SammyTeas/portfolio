@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Sammy Teas — Book Designer</title>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="favicon.ico"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" href="css/w3.css">
+		<script src="https://gumroad.com/js/gumroad.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+		<link href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" rel="stylesheet" />
+		<link href="resources/photoswipe.css" type="text/css" rel="stylesheet" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="js/modernizr.custom.js"></script>
+
+		<script type="text/javascript" src="resources/klass.min.js"></script>
+				<script type='text/javascript' src='http://code.jquery.com/jquery-1.12.1.min.js'></script>
+
+
+	<script type="text/javascript" src="js/strip.pkgd.min.js"></script>
+	<link href="css/strip.css" media="all" rel="stylesheet" type="text/css" >
+	<style>
+	#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff; /* change if the mask should be a color other than white */
+	z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally on the screen */
+	top:50%; /* centers the loading animation vertically on the screen */
+	background-image:url(images/status.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+div.bigform {
+	margin-bottom: 50px;
+	text-align: right;
+	width: 50%;
+	height: 600px;
+	float: left;
+	clear: both;
+
+
+
+}
+
+
+div.contactinfo {
+	float: left;
+ height: 600px;
+ width: 400px;
+ text-align: left;
+ 	margin-bottom: 50px;
+ 	padding-left: 70px;
+
+}
+
+div.bigform >img {
+padding-top: 16px; min-width:400px; max-width:400px;
+
+}
+
+
+p > a {
+	color:#66CDAA
+}
+
+p > a:hover {
+	color:teal
+}
+
+div.contactinfo {
+	float: none;
+height: auto;
+text-align: left;
+ max-width: 400px;
+ min-width: 400px;
+ padding-left: 0px;
+margin-bottom: 80px;
+margin-left: auto;
+
+margin-right:auto;
+ 	padding-right: 0px;
+ }
+
+
+@media only screen and (max-width: 820px) {
+
+	div.bigform {
+	width: 100%;
+	text-align: center;
+	clear: none;
+	margin-bottom:20px;
+		padding-left: 10%;
+			padding-right: 10%;
+
+
+}
+
+@media only screen and (max-width: 800px) {
+.main {
+	width: 450px;
+	padding-left: 3%;
+}
+
+.open {
+	width: 300px;
+	padding-bottom: 550px;
+}
+
+
+
+ul.bk-list {
+	text-align: center;
+}
+div.buttons {
+	padding-left: 25px;
+}
+
+
+@media only screen and (max-width: 830px) {
+    
+    	ul.social-icons {
+	z-index: 1000;}
+
+    nav {
+    	
+    top: 0;
+  position: fixed;
+    width: 100%;
+    z-index:999;
+    opacity:1;
+    -webkit-transition:opacity 1s ease-in-out;
+    -moz-transition:opacity 1s ease-in-out;
+    -o-transition:opacity 1s ease-in-out;
+    -ms-transition:opacity 1s ease-in-out;
+    transition:opacity 1s ease-in-out;
+    }
+
+   .w3-content .w3-display-container {
+    	padding-top:40px;
+    }
+
+
+    nav > ul {
+    	display: inline-block;
+ 
+    }
+    .container {
+    	padding-top: 80px;
+    }
+
+
+div.contactinfo {
+	float: none;
+height: auto;
+text-align: center;
+ max-width: 400px;
+ min-width: 400px;
+ padding-left: 0px;
+margin-bottom: 80px;
+margin-left: auto;
+
+margin-right:auto;
+ 	padding-right: 0px;
+
+ }
+
+    @media only screen and (max-width: 700px) {
+    
+nav {
+	width: 400px;
+	position:absolute;
+ left:50%;
+  margin-left:-200px;
+}
+
+.navbar-fixed {
+  width: 400px;
+}
+
+#largerr {
+	padding-right: 28.5px;
+	padding-left: 28.5px;
+}
+
+   .w3-content .w3-display-container {
+    	padding-top:80px;
+    }
+
+#largerr {
+	padding-right: 28.5px;
+	padding-left: 28.5px;
+}
+
+.w3-display-middle{
+	margin-top: 40px;
+}
+
+.w3-button{
+	margin-top: 40px;
+}
+
+.w32-button{
+	margin-top: 40px;
+}
+
+
+.w3-blackbox,.w3-hover-blackbox:hover{color:black!important;background-color: white!important;  text-align: center; min-height: 10em; min-width: 10em ; max-height: 10em; max-width: 10em;}
+.w3-blackbox > h1 {font-size: 5em; font-family: 'Merriweather', serif; 	margin-bottom: -60px; margin-top:-7px;}
+.w3-blackbox > p {font-size: 14px; margin-top: 30px;}
+.words-1 span {font-size: 14px; margin-top: 12px;   margin-left: 0px;}
+
+.w3-blackbox,.w3-hover-blackbox:hover{color:black!important;background-color: white!important;  text-align: center; min-height: 8em; min-width: 8em ; max-height: 8em; max-width: 8em;}
+.w3-blackbox > h1 {font-size: 4em; font-family: 'Merriweather', serif; 	margin-bottom: -60px; margin-top:-7px;}
+
+
+
+
+ @media only screen and (max-width: 510px) {
+
+div.bigform {
+height: 450px;
+margin-bottom: 0px;
+
+
+}
+
+div.contactinfo {
+
+max-width: 300px;
+ min-width: 300px;
+}
+
+h1 {
+margin-bottom: -15px;
+}
+div.bigform >img {
+min-width:300px; max-width:300px;
+
+}
+
+
+   @media only screen and (max-width: 500px) {
+    
+
+
+
+.open {
+	padding-top: 40px;
+	padding-bottom: 500px;
+}
+
+   .w3-content .w3-display-container {
+    	display:none;
+    }
+
+          .w3-content .w3-display-container2 {
+    	display:block;
+    	padding-top:80px;
+    }
+}
+
+
+	</style>
+
+
+	</head>
+
+	<div id="preloader">
+	<div id="status">&nbsp;</div>
+	</div>
+
+<div>
+	<div id='socials'>
+				<ul class="social-icons icon-circle icon-zoom" > 
+	      <li><a href="https://www.pinterest.ca/sammyteas/"><i class="fa fa-pinterest"></i></a> </li> 
+	      <li><a href="https://www.behance.net/sammyteas"><i class="fa fa-behance"></i></a> </li>   
+	      <li> <a href="https://www.instagram.com/sammyteas/"><i class="fa fa-instagram"></i></a></li> 
+	  	</ul>
+	</div>
+
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img class="fading" src="images/banners/2.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-blackbox">
+    <h1>st<br></h1>
+
+                <p style="padding-left:6px;">about</p>
+                       
+  </div>
+</div>
+
+
+<div class="w3-display-container2">
+    <img class="fading" src="images/banners/1.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-blackbox">
+       <h1>st<br></h1>
+                    <p style="padding-left:6px;">about</p>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+  </div>
+</div>
+
+
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+$('.mySlides:visible').fadeOut(function() {
+   $(x[slideIndex-1]).fadeIn();
+});
+}
+</script>
+
+
+
+
+
+  <nav id='nav_bar'>
+    <ul class='nav_links'>
+
+      <li><a href="index.html">Portfolio</a></li>
+
+      <li><a href="services.html">Services</a></li>
+      <li id="largerr"; style="background-color:lightyellow"><a href="about.html" >About</a></li>
+      <li id="largerr"><a href="contact.html">Contact</a></li>
+
+</div>
+
+    </ul>
+
+
+  </nav>
+
+
+			
+
+	<body id="toptop">
+
+
+
+
+		<div class="container">	
+
+	
+
+
+<div class="contactinfo">
+<p>
+Hello, I'm Sam. I am a graphic designer and illustrator specializing in print design: typesetting, book layout, book covers, bookmarks, posters, and catalogues are all areas I'm very comfortable with. All design is storytelling. Each project has its own unique story and the role of the designer is to communicate this story in a memorable and impactful way. It's about instilling a feeling or an idea that would otherwise be forgotten. See my <a href="services.html">services</a> page for more information.
+
+<br>
+
+  <br>
+Feel free to <a href="contact.html">contact</a> me about any design projects. <br>I'd be happy to help. <br>
+
+  </p>
+
+  <br>
+</div>
+		
+		</div><!-- /container -->
+<div class="scrolltop" onclick="yoyo()">
+		<footer id="footer">
+Back to top
+</div>
+</footer>
+
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').delay(500).fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(800).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(800).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
+
+<script>
+function yoyo() {
+   $('html,body').animate({ scrollTop: $("#toptop").offset().top
+}, 1000 );
+      
+
+}
+</script>
+
+
+</footer>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/books1.js"></script>
+		<script>
+			$(function() {
+
+				Books.init();
+
+			});
+		</script>
+
+		<script>
+		var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.scrollY >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+Try it Yourself »
+</script>
+</div>
+
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(350).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
+
+
+	</body>
+</html>

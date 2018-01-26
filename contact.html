@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Sammy Teas — Book Designer</title>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="favicon.ico"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" href="css/w3.css">
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" rel="stylesheet" />
+		<link href="resources/photoswipe.css" type="text/css" rel="stylesheet" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="js/modernizr.custom.js"></script>
+
+		<script type="text/javascript" src="resources/klass.min.js"></script>
+				<script type='text/javascript' src='http://code.jquery.com/jquery-1.12.1.min.js'></script>
+
+
+	<script type="text/javascript" src="js/strip.pkgd.min.js"></script>
+	<link href="css/strip.css" media="all" rel="stylesheet" type="text/css" >
+	<style>
+	#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff; /* change if the mask should be a color other than white */
+	z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally on the screen */
+	top:50%; /* centers the loading animation vertically on the screen */
+	background-image:url(images/status.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+div.container {
+	width: 1080px;
+}
+
+div.bigform {
+	margin-bottom: 50px;
+	width: 600px;
+	float: left;
+	margin-right: 100px;
+}
+
+@media only screen and (max-width: 1192px) {
+
+	div.bigform {
+	width: 100%;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+div.contactinfo {
+	text-align: center;
+	padding-bottom: 80px;
+}
+div.container {
+	width: auto;
+}
+
+
+
+@media only screen and (max-width: 1192px) {
+
+	ul.social-icons {
+	margin-top:0px;
+	margin-left: -80px;}
+
+
+
+    .social-icons .fa {
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+		padding-right: 5px;
+	padding-left: 40px;
+	margin-bottom: 5px;
+	font-size: 1.5em;
+}
+.main {
+	width: 750px;
+	padding-left: 2%;
+}
+
+.open {
+	width: 500px;
+	padding-bottom:350px;
+}
+
+.peat {
+	padding-bottom:30px;
+
+}
+
+
+#twoline {
+	margin-left: -20px;
+}
+
+#oneline {
+	margin-left: -20px;
+}
+
+@media only screen and (max-width: 920px) {
+
+.mainalt {
+	width: 450px;
+	padding-left: 3%;
+}
+
+.mainalt > ul {
+	text-align:center;
+}
+
+}
+
+@media only screen and (max-width: 800px) {
+.main {
+	width: 450px;
+	padding-left: 3%;
+}
+
+.open {
+	width: 300px;
+	padding-bottom: 550px;
+}
+
+
+
+ul.bk-list {
+	text-align: center;
+}
+div.buttons {
+	padding-left: 25px;
+}
+
+
+
+@media only screen and (max-width: 830px) {
+    
+    	ul.social-icons {
+	z-index: 1000;}
+
+    nav {
+    	
+    top: 0;
+  position: fixed;
+    width: 100%;
+    z-index:999;
+    opacity:1;
+    -webkit-transition:opacity 1s ease-in-out;
+    -moz-transition:opacity 1s ease-in-out;
+    -o-transition:opacity 1s ease-in-out;
+    -ms-transition:opacity 1s ease-in-out;
+    transition:opacity 1s ease-in-out;
+    }
+
+    .w3-content .w3-display-container {
+    	padding-top:40px;
+    }
+
+
+
+    nav > ul {
+    	display: inline-block;
+ 
+    }
+    .container {
+    	padding-top: 80px;
+    }
+
+
+   @media only screen and (max-width: 700px) {
+    
+nav {
+	width: 400px;
+	position:absolute;
+ left:50%;
+  margin-left:-200px;
+}
+
+.navbar-fixed {
+  width: 400px;
+}
+
+#largerr {
+	padding-right: 28.5px;
+	padding-left: 28.5px;
+}
+
+   .w3-content .w3-display-container {
+    	padding-top:80px;
+    }
+
+.w3-display-middle{
+	margin-top: 40px;
+}
+
+.w3-button{
+	margin-top: 40px;
+}
+
+.w32-button{
+	margin-top: 40px;
+}
+
+
+.w3-blackbox,.w3-hover-blackbox:hover{color:black!important;background-color: white!important;  text-align: center; min-height: 10em; min-width: 10em ; max-height: 10em; max-width: 10em;}
+.w3-blackbox > h1 {font-size: 5em; font-family: 'Merriweather', serif; 	margin-bottom: -60px; margin-top:-7px;}
+.w3-blackbox > p {font-size: 14px; margin-top: 30px;}
+.words-1 span {font-size: 14px; margin-top: 12px;   margin-left: 0px;}
+
+.w3-blackbox,.w3-hover-blackbox:hover{color:black!important;background-color: white!important;  text-align: center; min-height: 8em; min-width: 8em ; max-height: 8em; max-width: 8em;}
+.w3-blackbox > h1 {font-size: 4em; font-family: 'Merriweather', serif; 	margin-bottom: -60px; margin-top:-7px;}
+
+
+   @media only screen and (max-width: 500px) {
+    
+
+
+
+.open {
+	padding-top: 40px;
+	padding-bottom: 500px;
+}
+
+   .w3-content .w3-display-container {
+    	display:none;
+    }
+
+          .w3-content .w3-display-container2 {
+    	display:block;
+    	padding-top:80px;
+    }
+}
+
+
+	</style>
+
+
+
+	</head>
+
+	<div id="preloader">
+	<div id="status">&nbsp;</div>
+	</div>
+
+<div >
+	<div id='socials'>
+				<ul class="social-icons icon-circle icon-zoom" > 
+	      <li><a href="https://www.pinterest.ca/sammyteas/"><i class="fa fa-pinterest"></i></a> </li> 
+	      <li><a href="https://www.behance.net/sammyteas"><i class="fa fa-behance"></i></a> </li>   
+	      <li> <a href="https://www.instagram.com/sammyteas/"><i class="fa fa-instagram"></i></a></li> 
+	  	</ul>
+	</div>
+
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img class="fading" src="images/banners/2.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-blackbox">
+    <h1>st<br></h1>
+
+                    <div class="words words-1" >
+                        <p >
+                        <span >sam tse</span>
+                       
+                            </p>
+                    </div>
+                    <p style="padding-left:6px;"> book design</p>
+  </div>
+</div>
+
+<div class="w3-display-container2" >
+  <img class="fading" src="images/banners/1.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-blackbox">
+       <h1>st<br></h1>
+                    <p style="padding-left:6px;">bookdesign</p>
+  </div>
+</div>
+
+
+
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+$('.mySlides:visible').fadeOut(function() {
+   $(x[slideIndex-1]).fadeIn();
+});
+}
+</script>
+
+
+
+
+
+  <nav id='nav_bar'>
+    <ul class='nav_links'>
+
+      <li><a href="index.html" >Portfolio</a></li>
+             <li><a href="services.html">Services</a></li>
+      <li id="largerr"><a href="about.html">About</a></li>
+      <li id="largerr" style="background-color:lightyellow"><a href="contact.html">Contact</a></li>
+</div>
+
+    </ul>
+
+
+  </nav>
+
+
+			
+
+	<body id="toptop">
+
+		<div class="container" style=" margin:auto">	
+
+	
+				<div class="bigform" style=" z-index: -1; margin-top: 20px;" >
+		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRkYq1Kp8fwPU6eCODWG9ZCkTkmTYoqWHcgDGJvtvCdF7k9g/viewform?embedded=true" width="100%" height="930" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+				</div>
+				<div class="contactinfo">
+			
+			<p>
+			Feel free to get in touch if you'd like to work with me!  <br>
+			Or just say hi. <br>
+			<br>
+
+			<h3> Email </h3>
+
+				<a href="mailto:sam.tse@live.com">sam.tse@live.com</a><br></p>
+				<br>
+
+
+		<h3> Phone </h3>
+
+				647-870-6885
+
+				</div>
+
+		
+		</div><!-- /container -->
+
+<div class="scrolltop" onclick="yoyo()">
+		<footer id="footer">
+Back to top
+</div>
+</footer>
+
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').delay(500).fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(800).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(800).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
+
+<script>
+function yoyo() {
+   $('html,body').animate({ scrollTop: $("#toptop").offset().top
+}, 1000 );
+      
+
+}
+</script>
+</footer>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/books1.js"></script>
+		<script>
+			$(function() {
+
+				Books.init();
+
+			});
+		</script>
+
+		<script>
+		var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.scrollY >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</div>
+
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').delay(500).fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(800).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(800).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
+
+
+	</body>
+</html>
