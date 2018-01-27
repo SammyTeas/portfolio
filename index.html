@@ -6,6 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>Sammy Teas — Book Designer</title>
 		<meta content="Book designer and illustrator." name="description" />
+		<link rel="stylesheet" href="themes/green/pace-theme-minimal.css">
+		<script src="pace.js"></script>
+
 
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
@@ -18,24 +21,37 @@
 		<link href="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" rel="stylesheet" />
 		<link href="resources/photoswipe.css" type="text/css" rel="stylesheet" />
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<script data-src="js/modernizr.custom.js"></script>
+		<script src="js/modernizr.custom.js"></script>
 
-		<script data-src="resources/klass.min.js"></script>
-				<script type='text/javascript' data-src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+		<script src="resources/klass.min.js"></script>
+				<script type='text/javascript' src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
 
 
-	<script data-src="js/strip.pkgd.min.js"></script>
+	<script src="js/strip.pkgd.min.js"></script>
 	<link href="css/strip.css" media="all" rel="stylesheet" type="text/css" >
 	<style>
-
-img {
-  opacity: 1;
-  transition: opacity 0.3s;
+#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff; /* change if the mask should be a color other than white */
+	z-index:99; /* makes sure it stays on top */
 }
 
-img[data-src] {
-  opacity: 0;
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally on the screen */
+	top:50%; /* centers the loading animation vertically on the screen */
+	background-image:url(images/status.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
+
 
 .text {
   white-space: nowrap; 
@@ -403,7 +419,9 @@ nav {
 });</script>	
 
 	</head>
-
+	<div id="preloader">
+	<div id="status">&nbsp;</div>
+	</div>
 
 <div>
 	<div id='socials'>
@@ -418,7 +436,7 @@ nav {
 <div class="w3-content w3-display-container">
 
 <div class="w3-display-container mySlides">
-  <img class="fading" data-src="images/banners/2.jpg" style="width:100%">
+  <img class="fading" src="images/banners/2.jpg" style="width:100%">
   <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-blackbox">
     <h1>st<br></h1>
 
@@ -433,7 +451,7 @@ nav {
 </div>
 
 <div class="w3-display-container2 " >
-  <img class="fading" data-src="images/banners/1.jpg" style="width:100%">
+  <img class="fading" src="images/banners/1.jpg" style="width:100%">
   <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-blackbox">
        <h1>st<br></h1>
                     <p style="padding-left:6px;">book design</p>
@@ -499,25 +517,25 @@ $('.mySlides:visible').fadeOut(function() {
 
 			
 
-  				<div class="peat" onclick="poniard()"> <img class= "transparent" data-src="images/port/business/poniard.png" ><div class="overlay">
+  				<div class="peat" onclick="poniard()"> <img class= "transparent" src="images/port/business/poniard.png" ><div class="overlay">
     <p class="text">Poniard Press</p>
   </div></div>
 
-  <div class="peat" onclick="harper()"> <img class= "transparent" data-src="images/port/business/harper.png" ><div class="overlay">
+  <div class="peat" onclick="harper()"> <img class= "transparent" src="images/port/business/harper.png" ><div class="overlay">
     <p class="text">HarperCollins</p>
   </div></div>
 
-			<div class="peat" onclick="drawn()"> <img class= "transparent" data-src="images/port/business/drawn.png" ><div class="overlay">
+			<div class="peat" onclick="drawn()"> <img class= "transparent" src="images/port/business/drawn.png" ><div class="overlay">
     <p class="text">Drawn &amp; Quarterly</p>
   </div></div>
-  			<div class="peat" onclick="firefly()"> <img class= "transparent" data-src="images/port/business/firefly.png"><div class="overlay">
+  			<div class="peat" onclick="firefly()"> <img class= "transparent" src="images/port/business/firefly.png"><div class="overlay">
     <p class="text">Firefly Books</p>
   </div></div>
-  				<div class="peat" onclick="myFunction()"> <img class= "transparent" data-src="images/port/business/aci.png"> <div class="overlay"><p class="text">Art Canada Institute</p>
+  				<div class="peat" onclick="myFunction()"> <img class= "transparent" src="images/port/business/aci.png"> <div class="overlay"><p class="text">Art Canada Institute</p>
   </div>
   </div>
 
-			<div class="peat" onclick="penguin()"> <img class= "transparent" data-src="images/port/business/Penguin_logo.png"  ><div class="overlay">
+			<div class="peat" onclick="penguin()"> <img class= "transparent" src="images/port/business/Penguin_logo.png"  ><div class="overlay">
     <p class="text">Penguin</p>
   </div>
 			</div>
@@ -1660,8 +1678,8 @@ $('.mySlides:visible').fadeOut(function() {
 		</div><!-- /container -->
 
 
-		<script data-src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script data-src="js/books1.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/books1.js"></script>
 		<script>
 			$(function() {
 
@@ -1739,15 +1757,7 @@ function penguin() {
 }      
 </script>
 
-<script>
-[].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
-  img.setAttribute('src', img.getAttribute('data-src'));
-  img.onload = function() {
-    img.removeAttribute('data-src');
-  };
-});
 
-</script>
 
 
 <div class="scrolltop" onclick="yoyo()">
@@ -1766,6 +1776,14 @@ function yoyo() {
 }
 </script>
 
-
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').delay(500).fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(800).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(800).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
 	</body>
 </html>
