@@ -46,8 +46,7 @@
 	background-position:center;
 	margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
-div.container {
-}
+
 
 div.bigform {
 	margin-bottom: 50px;
@@ -101,6 +100,69 @@ padding-top: 16px; min-width:400px; max-height: 380px;
 
 }
 
+
+@media only screen and (max-width: 1192px) {
+
+	div.bigform {
+	width: 100%;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+div.contactinfo {
+	text-align: center;
+	padding-bottom: 80px;
+}
+div.container {
+	width: auto;
+}
+
+
+ul.social-icons {
+	margin-top:0px;
+	margin-left: -80px;}
+
+
+
+    .social-icons .fa {
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+		padding-right: 5px;
+	padding-left: 40px;
+	margin-bottom: 5px;
+	font-size: 1.5em;
+}
+.main {
+	width: 750px;
+	padding-left: 2%;
+}
+
+.open {
+	width: 500px;
+	padding-bottom:350px;
+}
+
+.peat {
+	padding-bottom:30px;
+
+}
+
+
+#twoline {
+	margin-left: -20px;
+}
+
+#oneline {
+	margin-left: -20px;
+}
 
 
 @media only screen and (max-width: 1200px) {
@@ -157,85 +219,6 @@ margin-bottom: -10px;
  	margin-right: 0%;
 }
 
-
-
-@media only screen and (max-width: 700px) {
-
-}
-@media only screen and (max-width: 510px) {
-
-div.bigform {
-height: 320px;
-margin-bottom: 0px;
-
-
-}
-
-div.contactinfo {
-
-max-width: 300px;
- min-width: 300px;
-}
-
-h3 {
-margin-bottom: -15px;
-}
-
-
-img.transparent {
-min-width:300px; max-height: 300px;
-
-
-}
-
-@media only screen and (max-width: 1192px) {
-
-	ul.social-icons {
-	margin-top:0px;
-	margin-left: -80px;}
-
-
-
-    .social-icons .fa {
-	width: 80px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	color: #FFF;
-	color: rgba(255, 255, 255, 0.8);
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-		padding-right: 5px;
-	padding-left: 40px;
-	margin-bottom: 5px;
-	font-size: 1.5em;
-}
-.main {
-	width: 750px;
-	padding-left: 2%;
-}
-
-.open {
-	width: 500px;
-	padding-bottom:350px;
-}
-
-.peat {
-	padding-bottom:30px;
-
-}
-
-
-#twoline {
-	margin-left: -20px;
-}
-
-#oneline {
-	margin-left: -20px;
-}
 
 @media only screen and (max-width: 920px) {
 
@@ -305,8 +288,7 @@ div.buttons {
     	padding-top: 80px;
     }
 
-
-   @media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
     
 nav {
 	width: 400px;
@@ -350,7 +332,34 @@ nav {
 .w3-blackbox > h1 {font-size: 4em; font-family: 'Merriweather', serif; 	margin-bottom: -60px; margin-top:-7px;}
 
 
-   @media only screen and (max-width: 500px) {
+}
+@media only screen and (max-width: 510px) {
+
+div.bigform {
+height: 320px;
+margin-bottom: 0px;
+
+
+}
+
+div.contactinfo {
+
+max-width: 300px;
+ min-width: 300px;
+}
+
+h3 {
+margin-bottom: -15px;
+}
+
+
+img.transparent {
+min-width:300px; max-height: 300px;
+
+
+}
+
+@media only screen and (max-width: 500px) {
     
 
 
@@ -369,6 +378,7 @@ nav {
     	padding-top:80px;
     }
 }
+
 
 	</style>
 
@@ -479,10 +489,11 @@ $('.mySlides:visible').fadeOut(function() {
   <nav id='nav_bar'>
     <ul class='nav_links'>
 
-      <li><a href="index.html">Portfolio</a></li>
-       <li style="background-color:lightyellow"><a href="services.html" >Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+         	<li style="padding-left:31.5px; padding-right:31.5px">Portfolio</li>
+      <li style="background-color:lightyellow;  padding-left:22.5px; padding-right:22.5px"><a href="services.html">Services</a></li>
+
+      <li ><a href="about.html">About</a></li>
+      <li ><a href="contact.html">Contact</a></li>
 </div>
 
     </ul>
@@ -517,6 +528,7 @@ $('.mySlides:visible').fadeOut(function() {
 			<a href="images/port/gallerys/textbook7.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="typesetting"> </a>
 			<a href="images/port/gallerys/textbook8.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="typesetting"> </a>
 			<a href="images/port/gallerys/textbook9.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="typesetting"> </a>
+			<a href="images/port/gallerys/textbook10.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="typesetting"> </a>
 						<a href="images/port/gallerys/raftsmen.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="typesetting"> </a>
 
 			<a href="images/port/gallerys/raftsmen2.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="typesetting"> </a>
@@ -569,6 +581,7 @@ Comics/graphic novels <br>
 			<a href="images/classics/abelard.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="covers"> </a>
 
 			<a href="images/classics/12yrs.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="covers"> </a>
+						<a href="images/classics/haunting.jpg" class='strip thumbnail' data-strip-caption="" data-strip-group="covers"> </a>
 
 
 </div>
