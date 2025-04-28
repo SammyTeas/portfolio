@@ -1,0 +1,52 @@
+{
+"templates": [
+    {
+        "id": "1", 
+        "title": "Sale Banner - Instagram Post - Discount Offer - Square - 1080x1080px",
+        "thumbnail": "files/templates/img/1.jpg", 
+        "image": "files/templates/img/1-large.jpg", 
+        "template": "files/templates/json/1.json",
+        "tags": "instagram-post banner-ads"
+    },
+    {
+        "id": "2", 
+        "title": "Valentine's Day - Instagram Post - Square - 1080x1080px",
+        "thumbnail": "files/templates/img/2.jpg",
+        "image": "files/templates/img/2-large.jpg",
+        "template": "files/templates/json/2.json", 
+        "tags": "instagram-post"
+    },
+    {
+        "id": "3", 
+        "title": "Quote - 800x600px",
+        "thumbnail": "files/templates/img/3.jpg",
+        "image": "files/templates/img/3-large.jpg", 
+        "template": "files/templates/json/3.json",
+        "tags": "quote"
+    },
+    {
+        "id": "4", 
+        "title": "Quote - 900x600px",
+        "thumbnail": "files/templates/img/4.jpg", 
+        "image": "files/templates/img/4-large.jpg", 
+        "template": "files/templates/json/4.json", 
+        "tags": "quote"
+    },
+    {
+        "id": "5", 
+        "title": "App Banner - 2000x1300px",
+        "thumbnail": "files/templates/img/5.jpg", 
+        "image": "files/templates/img/5-large.jpg", 
+        "template": "files/templates/json/5.json", 
+        "tags": "banner-ads"
+    },
+    {
+        "id": "6", 
+        "title": "Fitness Banner - Medium Rectangle - 300x250px",
+        "thumbnail": "files/templates/img/6.jpg", 
+        "image": "files/templates/img/6-large.jpg", 
+        "template": "files/templates/json/6.json", 
+        "tags": "banner-ads medium-rectangle"
+    },
+]
+}
