@@ -3,9 +3,9 @@
     {
         "id": "1", 
         "title": "Pangram Duel",
-        "thumbnail": "img/1.jpg", 
+        "thumbnail": "/img/1.jpg", 
         "image": "/img/1.jpg", 
-        "template": "1.json",
+        "template": "/1.json",
     },
     {
         "id": "2", 
