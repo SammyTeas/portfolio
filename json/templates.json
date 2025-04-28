@@ -47,6 +47,6 @@
         "image": "files/templates/img/6-large.jpg", 
         "template": "files/templates/json/6.json", 
         "tags": "banner-ads medium-rectangle"
-    },
+    }
 ]
 }
