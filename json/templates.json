@@ -2,7 +2,7 @@
 "templates": [
     {
         "id": "1", 
-        "title": "Sale Banner - Instagram Post - Discount Offer - Square - 1080x1080px",
+        "title": "PG Duel - Blue - 900x1050px",
         "thumbnail": "files/templates/img/1.jpg", 
         "image": "files/templates/img/1.jpg", 
         "template": "files/templates/json/1.json",
@@ -10,7 +10,7 @@
     },
     {
         "id": "2", 
-        "title": "Valentine's Day - Instagram Post - Square - 1080x1080px",
+        "title": "PG Duel - Purple - 900x1050px",
         "thumbnail": "files/templates/img/2.jpg",
         "image": "files/templates/img/2.jpg",
         "template": "files/templates/json/2.json", 
@@ -18,7 +18,7 @@
     },
     {
         "id": "3", 
-        "title": "Quote - 800x600px",
+        "title": "PG Duel - Green - 900x1050px",
         "thumbnail": "files/templates/img/3.jpg",
         "image": "files/templates/img/3.jpg", 
         "template": "files/templates/json/3.json",
@@ -26,7 +26,7 @@
     },
     {
         "id": "4", 
-        "title": "Quote - 900x600px",
+        "title": "PG Duel - Yellow - 900x1050px",
         "thumbnail": "files/templates/img/4.jpg", 
         "image": "files/templates/img/4.jpg", 
         "template": "files/templates/json/4.json", 
@@ -34,7 +34,7 @@
     },
     {
         "id": "5", 
-        "title": "App Banner - 2000x1300px",
+        "title": "PG Duel - Grey - 900x1050px",
         "thumbnail": "files/templates/img/5.jpg", 
         "image": "files/templates/img/5.jpg", 
         "template": "files/templates/json/5.json", 
@@ -42,7 +42,7 @@
     },
     {
         "id": "6", 
-        "title": "Fitness Banner - Medium Rectangle - 300x250px",
+        "title": "PG Duel - Red - 900x1050px",
         "thumbnail": "files/templates/img/6.jpg", 
         "image": "files/templates/img/6.jpg", 
         "template": "files/templates/json/6.json", 
