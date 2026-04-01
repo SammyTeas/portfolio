@@ -15,11 +15,363 @@
 <link href="css/w3.css" rel="stylesheet"/>
 <link href="css/component.css" rel="stylesheet" type="text/css">
 <link href="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" rel="stylesheet">
-</link></link></link></meta></head>
+<link href="resources/photoswipe.css" rel="stylesheet" type="text/css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+<script src="js/modernizr.custom.js"></script>
+<script src="resources/klass.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" type="text/javascript"></script>
+<script src="js/strip.pkgd.min.js"></script>
+<link href="css/strip.css" media="all" rel="stylesheet" type="text/css"/>
+<style>
+
+
+
+
+.text {
+	white-space: nowrap;
+	color: #404040;
+	font-size: 13px;
+	position: absolute;
+	left: 50%;
+	margin-top: -10px;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+.overlay {
+	position: absolute;
+	width: 150px;
+	opacity: 0;
+	transition: .5s ease;
+}
+
+.strp-window {
+	height: calc(100% - 52px);
+}
+
+.peat:hover .overlay {
+	opacity: 1;
+	z-index: 9999999999;
+}
+
+img.transparent {
+	opacity: 0.6;
+}
+
+img.transparent:hover {
+	opacity: 1;
+}
+
+.peat > img {
+	max-width: 150px;
+	min-width: 150px;
+}
+
+.bk-info {
+	margin-top: 470px;
+	margin-bottom: -100px;
+}
+
+.bk-info > h5 {
+	font-size: 14px;
+}
+
+.bk-info p {
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.footer-fixed {
+	position: fixed;
+	z-index: 99999999;
+}
+
+.jobbanner {
+	width: 70%;
+	max-width: 1080px;
+	height: 1px;
+	margin: auto;
+	position: relative;
+	display: block;
+	clear: both;
+	background-color: #d3d3d3;
+}
+
+.open {
+	padding-top: 100px;
+	padding-bottom: 180px;
+}
+
+.main {
+	width: 90%;
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 0 30px 0px;
+	padding-top: 110px;
+}
+
+.mainalt {
+	width: 90%;
+	max-width: 850px;
+	margin: 0 auto;
+	padding: 0 100px 0px;
+	padding-top: 110px;
+}
+
+.mainalt2 {
+	width: 90%;
+	max-width: 885px;
+	margin: 0 auto;
+	padding: 0 100px 0px;
+	padding-top: 110px;
+	text-align: center;
+}
+
+#twoline {
+	max-width: 750px;
+}
+
+#oneline {
+	max-width: 450px;
+	margin-left: 200px;
+}
+
+@media only screen and (max-width: 1192px) {
+	ul.social-icons {
+		margin-top: 0px;
+		margin-left: -80px;
+	}
+
+	.social-icons .fa {
+		width: 80px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #FFF;
+		color: rgba(255, 255, 255, 0.8);
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		padding-right: 5px;
+		padding-left: 40px;
+		margin-bottom: 5px;
+		font-size: 1.5em;
+	}
+
+	.main {
+		width: 750px;
+		padding-left: 2%;
+	}
+
+	.open {
+		width: 500px;
+		padding-bottom: 350px;
+	}
+
+	.peat {
+		padding-bottom: 30px;
+	}
+
+	#twoline {
+		margin-left: -20px;
+	}
+
+	#oneline {
+		margin-left: -20px;
+	}
+}
+
+@media only screen and (max-width: 920px) {
+	.mainalt {
+		width: 450px;
+		padding-left: 3%;
+	}
+
+	.mainalt > ul {
+		text-align: center;
+	}
+
+	.mainalt2 {
+		width: 450px;
+		padding-left: 3%;
+	}
+
+	.mainalt2 > ul {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 830px) {
+	ul.social-icons {
+		z-index: 1000;
+	}
+
+	nav {
+		top: 0;
+		position: fixed;
+		width: 100%;
+		z-index: 999;
+		opacity: 1;
+		-webkit-transition: opacity 1s ease-in-out;
+		-moz-transition: opacity 1s ease-in-out;
+		-o-transition: opacity 1s ease-in-out;
+		-ms-transition: opacity 1s ease-in-out;
+		transition: opacity 1s ease-in-out;
+	}
+
+	.w3-content .w3-display-container {
+		padding-top: 40px;
+	}
+
+	nav > ul {
+		display: inline-block;
+	}
+
+	.container {
+		padding-top: 80px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.main {
+		width: 450px;
+		padding-left: 3%;
+	}
+
+	.open {
+		width: 300px;
+		padding-bottom: 550px;
+	}
+
+	ul.bk-list {
+		text-align: center;
+	}
+
+	div.buttons {
+		padding-left: 25px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	nav {
+		width: 400px;
+		position: absolute;
+		left: 50%;
+		margin-left: -200px;
+	}
+
+	.navbar-fixed {
+		width: 400px;
+	}
+
+	#largerr {
+		padding-right: 28.5px;
+		padding-left: 28.5px;
+	}
+
+	.w3-content .w3-display-container {
+		padding-top: 80px;
+	}
+
+	.w3-display-middle {
+		margin-top: 40px;
+	}
+
+	.w3-button {
+		margin-top: 40px;
+	}
+
+	.w32-button {
+		margin-top: 40px;
+	}
+
+	.w3-blackbox,
+	.w3-hover-blackbox:hover {
+		color: black !important;
+		background-color: white !important;
+		text-align: center;
+		min-height: 8em;
+		min-width: 8em;
+		max-height: 8em;
+		max-width: 8em;
+	}
+
+	.w3-blackbox > h1 {
+		font-size: 4em;
+		font-family: 'Merriweather', serif;
+		margin-bottom: -60px;
+		margin-top: -7px;
+	}
+
+	.w3-blackbox > p {
+		font-size: 14px;
+		margin-top: 30px;
+	}
+
+	.words-1 span {
+		font-size: 14px;
+		margin-top: 12px;
+		margin-left: 0px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.open {
+		padding-top: 40px;
+		padding-bottom: 500px;
+	}
+
+	.w3-content .w3-display-container {
+		display: none;
+	}
+
+	.w3-content .w3-display-container2 {
+		display: block;
+		padding-top: 80px;
+	}
+}
+		</style>
+<script>
+		$(document).ready(function() {
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > 690) {
+					$('#nav_bar').addClass('navbar-fixed');
+				}
+				if ($(window).scrollTop() < 691) {
+					$('#nav_bar').removeClass('navbar-fixed');
+				}
+			});
+		});
+		</script>
+<script>
+		$(document).ready(function() {
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > 140) {
+					$('#socials').addClass('social-fixed');
+				}
+				if ($(window).scrollTop() < 141) {
+					$('#socials').removeClass('social-fixed');
+				}
+			});
+		});
+		</script>
+<script>
+		$(document).ready(function() {
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > 700) {
+					$('#footer').addClass('footer-fixed');
+				}
+				if ($(window).scrollTop() < 701) {
+					$('#footer').removeClass('footer-fixed');
+				}
+			});
+		});
+		</script>
+</link></link></link></link></meta></head>
 <body>
-<div id="preloader">
-<div id="status"> </div>
-</div>
+
 <div id="socials">
 <ul class="social-icons icon-circle icon-zoom">
 <li><a href="https://www.instagram.com/sammyteas/"><i class="fa fa-instagram"></i></a></li>
@@ -84,7 +436,7 @@
 <ul class="bk-list">
 <li style="width: 420px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="catch" href="images/port/gallerys/catch.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -95,8 +447,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="catch" href="images/port/gallerys/catch.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Catch that Hate</h4>
@@ -106,7 +458,7 @@
 </li>
 <li style="width: 343px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="danica" href="images/port/gallerys/danica.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -117,8 +469,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="danica" href="images/port/gallerys/danica.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Danica De La Torre: Certified Sleuth</h4>
@@ -128,7 +480,7 @@
 </li>
 <li style="width: 303px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="uatl" href="images/port/gallerys/uatl.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -139,8 +491,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="uatl" href="images/port/gallerys/uatl.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Under All the Lights</h4>
@@ -150,7 +502,7 @@
 </li>
 <li style="width: 343px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="twws" href="images/port/gallerys/twws.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -161,8 +513,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="twws" href="images/port/gallerys/twws.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>The Words We Share</h4>
@@ -172,7 +524,7 @@
 </li>
 <li style="width: 353px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="soulmachine" href="images/port/gallerys/soulmachine.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -183,8 +535,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="soulmachine" href="images/port/gallerys/soulmachine.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Soul Machine</h4>
@@ -194,7 +546,7 @@
 </li>
 <li style="width: 343px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="soloud" href="images/port/gallerys/soloud.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -205,8 +557,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="soloud" href="images/port/gallerys/soloud.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>So Loud!</h4>
@@ -216,7 +568,7 @@
 </li>
 <li style="width: 373px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="salma" href="images/port/gallerys/salma.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -227,8 +579,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="salma" href="images/port/gallerys/salma.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Salma Joins the Team</h4>
@@ -238,7 +590,7 @@
 </li>
 <li style="width: 363px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="ponakey" href="images/port/gallerys/ponakey.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -249,8 +601,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="ponakey" href="images/port/gallerys/ponakey.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Sarah Ponakey Series</h4>
@@ -260,7 +612,7 @@
 </li>
 <li style="width: 365px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="mehndi" href="images/port/gallerys/mehndi.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -271,8 +623,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="mehndi" href="images/port/gallerys/mehndi.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Mehndi Boy</h4>
@@ -282,7 +634,7 @@
 </li>
 <li style="width: 313px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="maya" href="images/port/gallerys/maya.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -293,8 +645,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="maya" href="images/port/gallerys/maya.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Maya Plays the Part</h4>
@@ -310,7 +662,7 @@
 <ul class="bk-list">
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="howisurvived" href="images/port/gallerys/howisurvived0.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -321,13 +673,13 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="howisurvived" href="images/port/gallerys/howisurvived1.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="howisurvived" href="images/port/gallerys/howisurvived2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="howisurvived" href="images/port/gallerys/howisurvived3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="howisurvived" href="images/port/gallerys/howisurvived4.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="howisurvived" href="images/port/gallerys/howisurvived5.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="howisurvived" href="images/port/gallerys/howisurvived6.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>How I Survived</h4>
@@ -337,7 +689,7 @@
 </li>
 <li style="width: 309px; padding-left:.5em">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="ahiha" href="images/port/gallerys/ahiha.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front" style="width: 309px">
 <div class="bk-cover-back" style="width: 309px"></div>
@@ -348,11 +700,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="ahiha" href="images/port/gallerys/Ahiha1.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="ahiha" href="images/port/gallerys/Ahiha2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="ahiha" href="images/port/gallerys/Ahiha3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="ahiha" href="images/port/gallerys/Ahiha4.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Ahiahia the Orphan</h4>
@@ -362,7 +714,7 @@
 </li>
 <li style="width: 300px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="kaak" href="images/port/gallerys/kaak1.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front" style="width: 300px">
 <div class="bk-cover-back" style="width: 300px"></div>
@@ -373,14 +725,14 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="kaak" href="images/port/gallerys/kaak9.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="kaak" href="images/port/gallerys/kaak10.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="kaak" href="images/port/gallerys/kaak11.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="kaak" href="images/port/gallerys/kaak2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="kaak" href="images/port/gallerys/kaak3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="kaak" href="images/port/gallerys/kaak5.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="kaak" href="images/port/gallerys/kaak7.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Kaakuluk Series</h4>
@@ -396,7 +748,7 @@
 <ul class="bk-list">
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="frank" href="images/port/gallerys/frank1.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
@@ -407,11 +759,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="frank" href="images/port/gallerys/frank.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="frank" href="images/port/gallerys/frank2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="frank" href="images/port/gallerys/frank3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="frank" href="images/port/gallerys/frank4.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Frankenstein</h4>
@@ -421,7 +773,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="vel" href="images/port/gallerys/velveteen1.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
@@ -432,11 +784,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="vel" href="images/port/gallerys/velveteen.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="vel" href="images/port/gallerys/velveteen2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="vel" href="images/port/gallerys/velveteen3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="vel" href="images/port/gallerys/velveteen4.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>The Velveteen Rabbit</h4>
@@ -446,7 +798,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="Painting by the inimitable James Jebusa Shannon." data-strip-group="jungle" href="images/port/gallerys/jungle.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
@@ -457,7 +809,7 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
+</a>
 </div>
 <div class="bk-info">
 <h4>The Jungle Book</h4>
@@ -467,7 +819,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="turn" href="images/port/gallerys/turnofthescrew.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
@@ -478,7 +830,7 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
+</a>
 </div>
 <div class="bk-info">
 <h4>Turn of the Screw</h4>
@@ -488,7 +840,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="moons" href="images/port/gallerys/moonstone.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
@@ -499,7 +851,7 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
+</a>
 </div>
 <div class="bk-info">
 <h4>The Moonstone</h4>
@@ -509,7 +861,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="Illustration traced from a photograph by Carl Van Vechten." data-strip-group="toklas" href="images/port/gallerys/toklas.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
@@ -520,7 +872,7 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
+</a>
 </div>
 <div class="bk-info">
 <h4>Alice B. Toklas</h4>
@@ -530,7 +882,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="heloise" href="images/port/gallerys/abelard1.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
@@ -541,11 +893,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="heloise" href="images/port/gallerys/abelard.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="heloise" href="images/port/gallerys/abelard2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="heloise" href="images/port/gallerys/abelard3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="heloise" href="images/port/gallerys/abelard4.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Love Letters</h4>
@@ -555,7 +907,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="forwhom" href="images/port/gallerys/forwhom1.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
@@ -566,11 +918,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="forwhom" href="images/port/gallerys/forwhom.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="forwhom" href="images/port/gallerys/forwhom2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="forwhom" href="images/port/gallerys/forwhom3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="forwhom" href="images/port/gallerys/forwhom4.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>For Whom the Bell Tolls</h4>
@@ -580,7 +932,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="12y" href="images/port/gallerys/12y1.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back" style="width: 300px; height: 414px;"></div>
@@ -591,11 +943,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="12y" href="images/port/gallerys/12y.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="12y" href="images/port/gallerys/12y2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="12y" href="images/port/gallerys/12y3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="12y" href="images/port/gallerys/12y4.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>12 Years a Slave</h4>
@@ -611,7 +963,7 @@
 <ul class="bk-list">
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="We wanted the design to be distinctly Canadian." data-strip-group="canadianity" href="images/port/gallerys/canadianity.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -622,11 +974,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="canadianity" href="images/port/gallerys/canadianity2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="canadianity" href="images/port/gallerys/canadianity3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="canadianity" href="images/port/gallerys/canadianity4.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="canadianity" href="images/port/gallerys/canadianity5.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Canadianity</h4>
@@ -636,7 +988,7 @@
 </li>
 <li style="width: 287px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="Simple and punchy." data-strip-group="burninourbeds" href="images/port/gallerys/burn.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front" style="width: 287px">
 <div class="bk-cover-back" style="width: 287px"></div>
@@ -647,11 +999,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="Really simple." data-strip-group="burninourbeds" href="images/port/gallerys/burn2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="burninourbeds" href="images/port/gallerys/burn3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="burninourbeds" href="images/port/gallerys/burn4.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="burninourbeds" href="images/port/gallerys/burn5.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>We'll All Be Burnt in Our Beds</h4>
@@ -661,7 +1013,7 @@
 </li>
 <li style="width: 291px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="A YA book about converging timelines." data-strip-group="meandme" href="images/port/gallerys/meandme.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front" style="width: 291px">
 <div class="bk-cover-back" style="width: 291px"></div>
@@ -672,8 +1024,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="We wanted to set the text messages apart; we originally had them in speech bubbles." data-strip-group="meandme" href="images/port/gallerys/meandme2.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Me and Me</h4>
@@ -683,7 +1035,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="About an ex–Hells Angel." data-strip-group="hardway" href="images/port/gallerys/hardwayout.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -694,9 +1046,9 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="hardway" href="images/port/gallerys/hardwayout2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="hardway" href="images/port/gallerys/hardwayout3.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>The Hard Way Out</h4>
@@ -706,7 +1058,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="Simple and bold." data-strip-group="shots" href="images/port/gallerys/shots1.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -717,8 +1069,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="shots" href="images/port/gallerys/shots.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Calling the Shots</h4>
@@ -728,7 +1080,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="A beaut." data-strip-group="against" href="images/port/gallerys/allodds.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -739,11 +1091,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="against" href="images/port/gallerys/allodds2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="against" href="images/port/gallerys/allodds3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="against" href="images/port/gallerys/allodds4.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="against" href="images/port/gallerys/allodds5.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Against All Odds</h4>
@@ -753,7 +1105,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="Punk-rock sensibility." data-strip-group="bificus" href="images/port/gallerys/ibificus1.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -764,11 +1116,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="Kinda a DIY look." data-strip-group="bificus" href="images/port/gallerys/ibificus2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="I really wanted to use Arial." data-strip-group="bificus" href="images/port/gallerys/ibificus3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="bificus" href="images/port/gallerys/ibificus4.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="bificus" href="images/port/gallerys/ibificus5.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>I, Bificus</h4>
@@ -778,7 +1130,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="Designing on spec to match a series." data-strip-group="ceo" href="images/port/gallerys/ceo2.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -789,8 +1141,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="ceo" href="images/port/gallerys/ceo1.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>CEO of Everything</h4>
@@ -800,7 +1152,7 @@
 </li>
 <li>
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="Lengthy sidebars and long lists." data-strip-group="truth" href="images/port/gallerys/truth1.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -811,9 +1163,9 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="truth" href="images/port/gallerys/truth.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="truth" href="images/port/gallerys/truth2.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Truth &amp; Lies</h4>
@@ -829,7 +1181,7 @@
 <ul class="bk-list">
 <li style="width: 378px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="artcom" href="images/port/gallerys/artcomic.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -840,12 +1192,12 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="artcom" href="images/port/gallerys/artcomic1.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="artcom" href="images/port/gallerys/artcomic2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="artcom" href="images/port/gallerys/artcomic3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="artcom" href="images/port/gallerys/artcomic4.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="artcom" href="images/port/gallerys/artcomic5.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Art Comic</h4>
@@ -855,7 +1207,7 @@
 </li>
 <li style="width: 331px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="redc" href="images/port/gallerys/redcolored1.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -866,11 +1218,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="redc" href="images/port/gallerys/redcolored2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="redc" href="images/port/gallerys/redcolored3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="redc" href="images/port/gallerys/redcolored4.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="redc" href="images/port/gallerys/redcolored5.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Red Colored Elegy</h4>
@@ -880,7 +1232,7 @@
 </li>
 <li style="width: 360px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="lovethatbunch" href="images/port/gallerys/lovethat.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -891,12 +1243,12 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="lovethatbunch" href="images/port/gallerys/lovethat1.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="lovethatbunch" href="images/port/gallerys/lovethat2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="lovethatbunch" href="images/port/gallerys/lovethat3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="lovethatbunch" href="images/port/gallerys/lovethat4.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="lovethatbunch" href="images/port/gallerys/lovethat5.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Love that Bunch</h4>
@@ -906,7 +1258,7 @@
 </li>
 <li style="width: 337px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="comeeasy" href="images/port/gallerys/comeeasy.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -917,11 +1269,11 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="comeeasy" href="images/port/gallerys/comeeasy2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="comeeasy" href="images/port/gallerys/comeeasy3.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="comeeasy" href="images/port/gallerys/comeeasy5.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="comeeasy" href="images/port/gallerys/comeeasy6.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>It Don't Come Easy</h4>
@@ -937,7 +1289,7 @@
 <ul class="bk-list">
 <li style="width: 360px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="syria" href="images/port/gallerys/syria.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -948,9 +1300,9 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="syria" href="images/port/gallerys/syria2.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="syria" href="images/port/gallerys/syria3.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Escape from Syria</h4>
@@ -960,7 +1312,7 @@
 </li>
 <li style="width: 328px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="schiele" href="images/port/gallerys/schiele.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -971,9 +1323,9 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="schiele" href="images/port/gallerys/schiele1.jpg"></a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="schiele" href="images/port/gallerys/schiele2.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Egon Schiele</h4>
@@ -983,7 +1335,7 @@
 </li>
 <li style="width: 328px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="capa" href="images/port/gallerys/capa.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -994,8 +1346,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="capa" href="images/port/gallerys/capa2.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>Robert Capa</h4>
@@ -1005,7 +1357,7 @@
 </li>
 <li style="width: 353px">
 <div class="fade">
-
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="raft" href="images/port/gallerys/raftsmen.jpg">
 <div class="bk-book book-1 bk-bookdefault">
 <div class="bk-front">
 <div class="bk-cover-back"></div>
@@ -1016,8 +1368,8 @@
 <div class="bk-top"></div>
 <div class="bk-bottom"></div>
 </div>
-
-
+</a>
+<a class="strip thumbnail" data-strip-caption="" data-strip-group="raft" href="images/port/gallerys/raftsmen2.jpg"></a>
 </div>
 <div class="bk-info">
 <h4>The Raftsmen</h4>
